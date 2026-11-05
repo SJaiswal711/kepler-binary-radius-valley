@@ -1,0 +1,5 @@
+sample,n_radius_entries,expected_count_in_range,weighting
+Kepler DR25 confirmed,1927,1927.0,Unweighted
+Catalogue radius,320,320.0,Unweighted
+Primary-host corrected,314,314.0,Unweighted
+Host-marginalized,526,292.0584275084768,Host-probability weighted

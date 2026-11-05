@@ -1,0 +1,6 @@
+sample,n_after_radius_and_period_selection,radius_min_included,radius_max_excluded,period_max_included
+Fulton et al. (2017),841,0.5,3.5,100.0
+CKS 2017,1523,0.5,3.5,100.0
+DR25 confirmed,2229,0.5,3.5,100.0
+Primary-host assumption (Rppri),303,0.5,3.5,100.0
+Catalogue radius (Rpkep),312,0.5,3.5,100.0

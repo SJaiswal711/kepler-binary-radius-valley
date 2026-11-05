@@ -1,0 +1,99 @@
+J/AJ/154/109  California-Kepler Survey (CKS). III. Planet radii  (Fulton+, 2017)
+================================================================================
+The California-Kepler Survey. III. A gap in the radius distribution of small
+planets.
+    Fulton B.J., Petigura E.A., Howard A.W., Isaacson H., Marcy G.W.,
+    Cargile P.A., Hebb L., Weiss L.M., Johnson J.A., Morton T.D., Sinukoff E.,
+    Crossfield I.J.M., Hirsch L.A.
+   <Astron. J., 154, 109-109 (2017)>
+   =2017AJ....154..109F    (SIMBAD/NED BibCode)
+================================================================================
+ADC_Keywords: Planets
+Keywords: planetary systems
+
+Abstract:
+    The size of a planet is an observable property directly connected to
+    the physics of its formation and evolution. We used precise radius
+    measurements from the California-Kepler Survey to study the size
+    distribution of 2025 Kepler planets in fine detail. We detect a factor
+    of >=2 deficit in the occurrence rate distribution at
+    1.5-2.0R_{Earth}_. This gap splits the population of close-in
+    (P<100days) small planets into two size regimes: R_P_<1.5R_{Earth}_
+    and R_P_=2.0--3.0R_{Earth}_, with few planets in between. Planets in
+    these two regimes have nearly the same intrinsic frequency based on
+    occurrence measurements that account for planet detection
+    efficiencies. The paucity of planets between 1.5 and 2.0R_{Earth}_
+    supports the emerging picture that close-in planets smaller than
+    Neptune are composed of rocky cores measuring 1.5R_{Earth}_ or smaller
+    with varying amounts of low-density gas that determine their total
+    sizes.
+
+Description:
+    We adopt the stellar sample and the measured stellar parameters from
+    the California-Kepler Survey (CKS) program (Petigura et al. 2017, Cat.
+    J/AJ/154/107; Paper I). The measured values of T_eff_, logg, and
+    [Fe/H] are based on a detailed spectroscopic characterization of
+    Kepler Object of Interest (KOI) host stars using observations from
+    Keck/HIRES. In Johnson et al. 2017 (Cat J/AJ/154/108; Paper II), we
+    associated those stellar parameters from Paper I to Dartmouth
+    isochrones (Dotter et al. 2008ApJS..178...89D) to derive improved
+    stellar radii and masses, allowing us to recalculate planetary radii
+    using the light-curve parameters from Mullally et al. 2015 (Cat.
+    J/ApJS/217/31).
+
+File Summary:
+--------------------------------------------------------------------------------
+ FileName    Lrecl    Records    Explanations
+--------------------------------------------------------------------------------
+ReadMe          80          .    This file
+table2.dat      84        900   *Planet detection statistics
+--------------------------------------------------------------------------------
+Note on table2.dat: Refer to Paper II (Johnson et al. 2017, Cat. J/AJ/154/108)
+ for the California-Kepler Survey (CKS) stellar parameters associated with each
+ Kepler Object of Interest (KOI). This table contains only the subset of planet
+ detections that passed the filters described in Section 2.2. The full sample of
+ planet candidates orbiting CKS target stars can be found in Paper II.
+--------------------------------------------------------------------------------
+
+See also:
+ J/AJ/154/107  : California-Kepler Survey (CKS). I. (Petigura+, 2017)
+ J/AJ/154/108  : California-Kepler Survey (CKS). II. (Johnson+, 2017)
+ J/ApJS/217/31 : Kepler planetary candidates. VI. 4yr Q1-Q16 (Mullally+, 2015)
+
+Byte-by-byte Description of file: table2.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label     Explanations
+--------------------------------------------------------------------------------
+       1  A1    ---     ---       [K]
+   2-  9  F08.2 ---     KOI       Kepler Object Identifier (KOI) of the
+                                   candidate planet
+  11- 21  F11.8 d       Per       Kepler candidate orbital period
+  23- 29  E7.1  d     E_Per       Upper uncertainty in Per
+  31- 37  E7.1  d     e_Per       Lower uncertainty in Per
+  39- 43  F5.2  Rgeo    Rad       Candidate planet radius (R_p_)
+  45- 48  F4.2  Rgeo  E_Rad       Upper uncertainty in Rad
+  50- 53  F4.2  Rgeo  e_Rad       Lower uncertainty in Rad
+  55- 61  F7.2  ---     S/N       Transit signal-to-noise ratio (m_i_)
+  63- 67  F5.3  ---     DProb     Detection probability (P_det_)
+  69- 74  F6.4  ---     TProb     Transit probability
+  76- 84  F9.2  ---     Weight    Mean total search completeness (1/w_i_)
+--------------------------------------------------------------------------------
+
+History:
+    From electronic version of the journal
+
+References:
+ Petigura et al.   Paper I.      2017AJ....154..107P   Cat. J/AJ/154/107
+ Johnson et al.    Paper II.     2017AJ....154..108J   Cat. J/AJ/154/108
+ Fulton et al.     Paper III.    2017AJ....154..109F   This catalog
+ Petigura et al.   Paper IV.     2018AJ....155...89P   Cat. J/AJ/155/89
+ Weiss et al.      Paper V.      2018AJ....155...48W   Cat. J/AJ/155/48
+ Weiss et al.      Paper VI.     2018AJ....156..254W   Cat. J/AJ/156/254
+ Fulton et al.     Paper VII.    2018AJ....156..264F   Cat. J/AJ/156/264
+ Mills et al.      Paper VIII.   2019AJ....157..198M
+ Dai et al.        Paper IX.     2020AJ....159..247D
+ Petigura et al.   Paper X.      2022AJ....163..179P   Cat. J/AJ/163/179
+ Isaacson et al.   Paper XI.     2024ApJ...961...85I   Cat. J/ApJ/961/85
+
+================================================================================
+(End)                 Prepared by [AAS]; Sylvain Guehenneux [CDS]    21-Dec-2017

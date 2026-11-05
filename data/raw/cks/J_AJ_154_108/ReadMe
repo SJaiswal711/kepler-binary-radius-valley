@@ -1,0 +1,174 @@
+J/AJ/154/108   California-Kepler Survey (CKS). II. Properties   (Johnson+, 2017)
+================================================================================
+The California-Kepler Survey. II. Precise physical properties of 2025 Kepler
+planets and their host stars.
+    Johnson J.A., Petigura E.A., Fulton B.J., Marcy G.W., Howard A.W.,
+    Isaacson H., Hebb L., Cargile P.A., Morton T.D., Weiss L.M., Winn J.N.,
+    Rogers L.A., Sinukoff E., Hirsch L.A.
+   <Astron. J., 154, 108-108 (2017)>
+   =2017AJ....154..108J    (SIMBAD/NED BibCode)
+================================================================================
+ADC_Keywords: Planets ; Stars, ages ; Stars, masses ; Stars, diameters ;
+              Effective temperatures ; Parallaxes, trigonometric ;
+              Abundances, [Fe/H]
+Keywords: planets and satellites: fundamental parameters -
+          planets and satellites: general - stars: abundances -
+          stars: fundamental parameters - techniques: spectroscopic
+
+Abstract:
+    We present stellar and planetary properties for 1305 Kepler Objects of
+    Interest hosting 2025 planet candidates observed as part of the
+    California-Kepler Survey. We combine spectroscopic constraints,
+    presented in Paper I, with stellar interior modeling to estimate
+    stellar masses, radii, and ages. Stellar radii are typically
+    constrained to 11%, compared to 40% when only photometric constraints
+    are used. Stellar masses are constrained to 4%, and ages are
+    constrained to 30%. We verify the integrity of the stellar parameters
+    through comparisons with asteroseismic studies and Gaia parallaxes. We
+    also recompute planetary radii for 2025 planet candidates. Because
+    knowledge of planetary radii is often limited by uncertainties in
+    stellar size, we improve the uncertainties in planet radii from
+    typically 42% to 12%. We also leverage improved knowledge of stellar
+    effective temperature to recompute incident stellar fluxes for the
+    planets, now precise to 21%, compared to a factor of two when derived
+    from photometry.
+
+Description:
+    The California-Kepler Survey (CKS) project and goals are described in
+    detail in Paper I (Petigura et al. 2017, Cat. J/AJ/154/107) of this
+    series. In brief, between 2012 and 2015, we obtained high-resolution
+    (R~50000) spectra of 1305 stars identified as Kepler Objects of
+    Interest (KOIs) with Keck/HIRES. We used an exposure meter to achieve
+    a uniform signal-to-noise ratio ~45 per HIRES pixel on blaze near
+    5500{AA}. Using these spectra, we derived effective temperature
+    (T_eff_), surface gravity (logg), metallicity ([Fe/H]), and projected
+    stellar rotation velocity (vsini).
+
+    In this work, we convert the observed spectroscopic properties of
+    Paper I (Petigura et al. 2017, Cat. J/AJ/154/107) into physical
+    stellar and planetary properties.
+
+File Summary:
+--------------------------------------------------------------------------------
+ FileName    Lrecl    Records   Explanations
+--------------------------------------------------------------------------------
+ReadMe          80          .   This file
+table1.dat     156       1305   Stellar properties
+table4.dat     106       2025   California-Kepler Survey (CKS) planet parameters
+--------------------------------------------------------------------------------
+
+See also:
+ V/133 : Kepler Input Catalog (Kepler Mission Team, 2009)
+ I/259 : The Tycho-2 Catalogue (Hog+ 2000)
+ J/AJ/154/107  : California-Kepler Survey (CKS). I. 1305 stars (Petigura+, 2017)
+ J/ApJ/806/183 : Planet radii of Kepler Object of Interest (Wolfgang+, 2015)
+ J/ApJS/217/31 : Kepler planetary candidates. VI. 4yr Q1-Q16 (Mullally+, 2015)
+ J/ApJS/211/2  : Revised stellar prop. of Q1-16 Kepler targets (Huber+, 2014)
+ J/ApJS/210/20 : Small Kepler planets radial velocities (Marcy+, 2014)
+ J/ApJ/790/146 : Planets in Kepler's multi-transiting systems (Fabrycky+, 2014)
+ J/ApJ/738/170 : False positive Kepler planet candidates (Morton+, 2011)
+ J/ApJS/197/8  : Kepler's multiple transiting planets (Lissauer+, 2011)
+
+Byte-by-byte Description of file: table1.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units     Label    Explanations
+--------------------------------------------------------------------------------
+   1- 12  A12   ---       Name     Star name: mostly Kepler Object Identifier
+                                    (KOI), or Kepler Input Calalog (KIC) number
+  14- 16  A3    ---       ---      [TYC]
+  18- 28  A11   ---       TYC2     Tycho-2 catalog identifier
+  30- 33  F4.1  ---       Ksmag    [6.5/14.7] Apparent 2MASS Ks band magnitude
+  35- 38  I4    K         Teff     [4619/6651] Isochrones derived effective
+                                    temperature (T_eff,iso_) (1)
+  40- 42  I3    K       e_Teff     [49/192] Lower uncertainty in Teff
+  44- 46  I3    K       E_Teff     [48/182] Upper uncertainty in Teff
+  48- 51  F4.2  [cm/s2]   logg     [2.7/4.7] Isochrones derived log surface
+                                    gravity (logg_iso_) (1)
+  53- 56  F4.2  [cm/s2] e_logg     [0.02/0.33] Lower uncertainty in logg
+  58- 61  F4.2  [cm/s2] E_logg     [0.02/0.15] Upper uncertainty in logg
+  63- 67  F5.2  [Sun]     [Fe/H]   [-0.6/0.5] Isochrones derived metallicity
+                                    ([Fe/H]_iso_) (1)
+  69- 72  F4.2  [Sun]   e_[Fe/H]   [0.01/0.1] Lower uncertainty in [Fe/H]
+  74- 77  F4.2  [Sun]   E_[Fe/H]   [0.01/0.19] Upper uncertainty in [Fe/H]
+  79- 82  F4.2  Msun      Mass     [0.6/2.2] Isochrones derived stellar mass
+                                    (M_*_) (1)
+  84- 87  F4.2  Msun    e_Mass     [0.02/0.23] Lower uncertainty in Mass
+  89- 92  F4.2  Msun    E_Mass     [0.02/0.2] Upper uncertainty in Mass
+  94- 98  F5.2  Rsun      Rad      [0.6/10.4] Isochrones derived stellar
+                                    radius (R_*_) (1)
+ 100-103  F4.2  Rsun    e_Rad      [0.02/1.6] Lower uncertainty in Rad
+ 105-108  F4.2  Rsun    E_Rad      [0.02/4.6] Upper uncertainty in Rad
+ 110-114  F5.2  [yr]      logA     [8.9/10.2] Isochrones derived log age
+                                    (log_10_(age)) (1)
+ 116-119  F4.2  [yr]    e_logA     [0.05/0.56] Lower uncertainty in logA
+ 121-124  F4.2  [yr]    E_logA     [0.04/0.35] Upper uncertainty in logA
+ 126-130  F5.2  mas       plx1     [0.1/35] Isochrones derived parallax (1)
+ 132-135  F4.2  mas     e_plx1     [0.01/1.4] Lower uncertainty in plx1
+ 137-140  F4.2  mas     E_plx1     [0.01/1.6] Upper uncertainty in plx1
+ 142-146  F5.2  mas       plx2     [1/15.3]? Tycho-Gaia Astrometric Solution
+                                    trigonometric parallax
+ 148-151  F4.2  mas     e_plx2     [0.2/1]? Lower uncertainty in plx2
+ 153-156  F4.2  mas     E_plx2     [0.2/1]? Upper uncertainty in plx2
+--------------------------------------------------------------------------------
+Note (1):
+     We used the isochrones Python package to derive the following physical
+     parameters:
+     Teff, logg, [Fe/H], Mass, Rad, logA, and plx1.
+     Isochrones returns posterior distributions on effective temperature,
+     surface gravity, and metallicity, which are distinguished from the purely
+     spectroscopic measurements.
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table4.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label     Explanations
+--------------------------------------------------------------------------------
+   1-  4  A4    ---     ---       [KOI-]
+   5- 12  F08.2 ---     KOI       Kepler Object Identifier (KOI) of the planet
+                                   candidate
+  14- 20  F7.2  d       Per       Orbital period
+  22- 30  F9.6  ---     Rp/R*     ? Planetary to stellar radii ratio (1)
+  32- 40  F9.6  ---   e_Rp/R*     ? Lower uncertainty in Rp/R*
+  42- 50  F9.6  ---   E_Rp/R*     ? Upper uncertainty in Rp/R*
+  52- 59  F8.2  Rgeo    Rad       ? Planetary radius R_p_
+  61- 68  F8.2  Rgeo  e_Rad       ? Lower uncertainty in Rad
+  70- 77  F8.2  Rgeo  E_Rad       ? Upper uncertainty in Rad
+  79- 83  I5    Earth   Sinc      ? Stellar irradiance (incident stellar flux)
+                                   S_inc_ (2)
+  85- 88  I4    Earth e_Sinc      ? Lower uncertainty in Sinc
+  90- 93  I4    Earth E_Sinc      ? Upper uncertainty in Sinc
+  95- 98  I4    K       Teq       ? Equilibrium temperature T_eq_ (3)
+ 100-102  I3    K     e_Teq       ? Lower uncertainty in Teq
+ 104-106  I3    K     E_Teq       ? Upper uncertainty in Teq
+--------------------------------------------------------------------------------
+Note (1): From the NASA's Exoplanet Archive Q1-Q16 KOI catalog (Mullally et al.
+     2015, Cat. J/ApJS/217/31).
+Note (2):
+     Stellar irradiance received at the planet relative to the Earth.
+     We compute the incident flux as:
+     S_inc_/S_{Earth}_=(T_eff_/5778K)^4^(R_*_/R_{Sun}_)^2^(a/au)^-2^, Eq. (3).
+Note (3):
+     Defined according to
+     (T_eq_/280K)=(S_inc_/S_{Earth}_)^1/4^(1-{alpha}/4)^1/4^, Eq. (4).
+     Assuming a Bond albedo {alpha} of 0.3, typical for super-Earth-size planets
+     (Demory 2014ApJ...789L..20D).
+--------------------------------------------------------------------------------
+
+History:
+    From electronic version of the journal
+
+References:
+ Petigura et al.   Paper I.      2017AJ....154..107P   Cat. J/AJ/154/107
+ Johnson et al.    Paper II.     2017AJ....154..108J   This catalog
+ Fulton et al.     Paper III.    2017AJ....154..109F   Cat. J/AJ/154/109
+ Petigura et al.   Paper IV.     2018AJ....155...89P   Cat. J/AJ/155/89
+ Weiss et al.      Paper V.      2018AJ....155...48W   Cat. J/AJ/155/48
+ Weiss et al.      Paper VI.     2018AJ....156..254W   Cat. J/AJ/156/254
+ Fulton et al.     Paper VII.    2018AJ....156..264F   Cat. J/AJ/156/264
+ Mills et al.      Paper VIII.   2019AJ....157..198M
+ Dai et al.        Paper IX.     2020AJ....159..247D
+ Petigura et al.   Paper X.      2022AJ....163..179P   Cat. J/AJ/163/179
+ Isaacson et al.   Paper XI.     2024ApJ...961...85I   Cat. J/ApJ/961/85
+
+================================================================================
+(End)                 Prepared by [AAS]; Sylvain Guehenneux [CDS]    14-Dec-2017

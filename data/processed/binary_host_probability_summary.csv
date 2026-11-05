@@ -1,0 +1,13 @@
+metric,value
+input_file,data\processed\sullivan2024_planets_quality_controlled.csv
+density_model,joint_MIST_mass_plus_catalogue_radius_density
+density_uncertainty_source,propagated_joint_MIST_density_errors
+n_planet_rows,396
+n_valid_host_probabilities,361
+n_invalid_host_probabilities,35
+median_p_primary_valid_rows,0.67189783452013
+fraction_primary_probability_gt_0_9,0.39335180055401664
+fraction_secondary_probability_gt_0_9,0.0332409972299169
+fraction_ambiguous_p_primary_0_1_to_0_9,0.5734072022160664
+prior_primary,0.5
+prior_secondary,0.5

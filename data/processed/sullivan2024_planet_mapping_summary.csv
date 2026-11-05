@@ -1,0 +1,13 @@
+metric,value
+input_stellar_systems_in_MIST_table,286
+retained_stellar_systems,278
+excluded_stellar_systems,8
+source_sullivan_planet_rows,404
+source_unique_KOIpl,404
+all_planet_rows_mapped_or_flagged,404
+planets_passing_MIST_quality_cut,396
+planets_in_excluded_systems,8
+planets_without_MIST_match,0
+unique_systems_with_quality_controlled_planets,278
+unique_systems_with_excluded_planets,8
+unique_systems_without_MIST_match,0

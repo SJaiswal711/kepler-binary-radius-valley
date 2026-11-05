@@ -1,0 +1,179 @@
+J/AJ/156/264   California-Kepler Survey. VII. Planet radius gap  (Fulton+, 2018)
+================================================================================
+The California-Kepler Survey.
+VII. Precise planet radii leveraging Gaia DR2 reveal the stellar mass dependence
+of the planet radius gap.
+    Fulton B.J., Petigura E.A.
+    <Astron. J., 156, 264 (2018)>
+    =2018AJ....156..264F    (SIMBAD/NED BibCode)
+================================================================================
+ADC_Keywords: Stars, double and multiple ; Exoplanets ; Effective temperatures ;
+              Abundances, [Fe/H] ; Photometry, infrared ; Stars, masses ;
+              Parallaxes, trigonometric ; Stars, diameters ; Stars, ages
+Keywords: planetary systems
+
+Abstract:
+    The distribution of planet sizes encodes details of planet formation
+    and evolution. We present the most precise planet size distribution to
+    date based on Gaia parallaxes, Kepler photometry, and spectroscopic
+    temperatures from the California-Kepler Survey. Previously, we measured
+    stellar radii to 11% precision using high-resolution spectroscopy; by
+    adding Gaia astrometry, the errors are now 3%. Planet radius measurements
+    are, in turn, improved to 5% precision. With a catalog of ~1000 planets
+    with precise properties, we probed in fine detail the gap in the planet
+    size distribution that separates two classes of small planets, rocky
+    super-Earths and gas-dominated sub-Neptunes. Our previous study and
+    others suggested that the gap may be observationally under-resolved and
+    inherently flat-bottomed, with a band of forbidden planet sizes. Analysis
+    based on our new catalog refutes this; the gap is partially filled in.
+    Two other important factors that sculpt the distribution are a planet's
+    orbital distance and its host-star mass, both of which are related to
+    a planet's X-ray/UV irradiation history. For lower-mass stars, the bimodal
+    planet distribution shifts to smaller sizes, consistent with smaller stars
+    producing smaller planet cores. Details of the size distribution including
+    the extent of the "sub-Neptune desert" and the width and slope of the gap
+    support the view that photoevaporation of low-density atmospheres is
+    the dominant evolutionary determinant of the planet size distribution.
+
+Description:
+    We began with the sample of planet host stars in the California-Kepler
+    Survey (CKS) sample. The CKS sample selection, spectroscopic observations,
+    and spectroscopic analysis are described in detail in Petigura et al.
+    (2017AJ....154..107P). In brief, the sample was initially constructed by
+    selecting all Kepler Objects of Interest (KOIs) brighter than Kp=14.2 mag.
+    A KOI is a Kepler target star that showed periodic photometric dimmings
+    indicative of planet transits. However, not all KOIs have received the
+    necessary follow-up attention needed to confirm the planets. Over the
+    course of the CKS project, we included additional targets to cover
+    different planet populations, including multi-candidate hosts,
+    ultra-short-period candidates, and habitable-zone candidates. We
+    cross-matched the CKS sample with the Gaia DR2 catalog (Cat. I/345) by
+    querying all Gaia sources within 1 arcsec of the KIC coordinates. In rare
+    cases, Gaia detected more than one source within 1 arcsec, and we selected
+    the source with the smallest difference between G and Kp magnitudes.
+    We cross-matched 1257 targets in this way.
+
+File Summary:
+--------------------------------------------------------------------------------
+ FileName    Lrecl  Records   Explanations
+--------------------------------------------------------------------------------
+ReadMe          80        .   This file
+table2.dat     178     1189   Stellar properties
+table3.dat     154     1901   CKS planet parameters
+table4.dat      41      907   Planet detection statistics
+--------------------------------------------------------------------------------
+
+See also:
+ I/345            : Gaia DR2 (Gaia Collaboration, 2018)
+ J/ApJS/217/31    : Kepler planetary cand. VI. 4yr Q1-Q16 (Mullally+, 2015)
+ J/MNRAS/452/2127 : Fundamental param. of Kepler stars (Silva Aguirre+, 2015)
+ J/AJ/154/107     : CKS. I. 1305 stars (Petigura+, 2017)
+ J/AJ/154/108     : CKS. II. Properties (Johnson+, 2017)
+ J/AJ/154/109     : CKS. III. Planet radii (Fulton+, 2017)
+ J/AJ/155/48      : CKS. V. Masses and radii (Weiss+, 2018)
+ J/AJ/155/89      : CKS. IV. Planets (Petigura+, 2018)
+
+Byte-by-byte Description of file: table2.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units    Label   Explanations
+--------------------------------------------------------------------------------
+   1-  6 A6     ---      KOI     Kepler Object of Interest identifier (K0NNNN)
+   8- 11 I4     K        Teff    [4618/6656] Effective temperature (1)
+  13- 14 I2     K      E_Teff    [60] Upper uncertainty in Teff
+  16- 17 I2     K      e_Teff    [60] Lower uncertainty in Teff
+  19- 23 F5.2   [Sun]    [Fe/H]  [-0.61/0.47] Metallicity (1)
+  25- 28 F4.2   [Sun]  E_[Fe/H]  [0.04] Upper uncertainty in [Fe/H]
+  30- 33 F4.2   [Sun]  e_[Fe/H]  [0.04] Lower uncertainty in [Fe/H]
+  35- 40 F6.3   mag      Ksmag   [6.491/14.487] 2MASS K_s_ band magitude
+  42- 46 F5.3   mag    e_Ksmag   [0.011/0.119]? Uncertainty in Ksmag
+  48- 53 F6.3   mas      plx     [0.302/15.668] Gaia DR2 trigonometric parallax
+  55- 59 F5.3   mas    e_plx     [0.011/0.294] Uncertainty in plx
+  61- 66 F6.3   Rsun     R       [0.48/10.48] Stellar radius from direct
+                                  integration
+  68- 72 F5.3   Rsun   E_R       [0.017/0.68] Upper uncertainty in R
+  74- 78 F5.3   Rsun   e_R       [0.016/0.615] Lower uncertainty in R
+  80- 84 F5.3   Msun     Miso    [0/2.292] Stellar mass from isochrone fit
+  86- 90 F5.3   Msun   E_Miso    [0/0.176] Upper uncertainty in Miso
+  92- 96 F5.3   Msun   e_Miso    [0/0.258] Lower uncertainty in Miso
+  98-103 F6.3   Rsun     Riso    [0/10.072] Stellar radius from isochrone fit
+ 105-109 F5.3   Rsun   E_Riso    [0/0.713] Upper uncertainty in Riso
+ 111-115 F5.3   Rsun   e_Riso    [0/0.579] Lower uncertainty in Riso
+ 117-120 F4.2   g/cm3    rhoiso  [0/2.57] Stellar density from isochrone fit
+ 122-125 F4.2   g/cm3  E_rhoiso  [0/0.24] Upper uncertainty in rhoiso
+ 127-130 F4.2   g/cm3  e_rhoiso  [0/0.24] Lpper uncertainty in rhoiso
+ 132-136 F5.2   [yr]     logAiso [8.66/10.14]? Log stellar age from isochrone
+                                  fit
+ 138-141 F4.2   [yr]   E_logAiso [0/0.64]? Upper uncertainty in logAiso
+ 143-146 F4.2   [yr]   e_logAiso [0.01/0.8]? Lower uncertainty in logAiso
+ 148-153 F6.3   arcsec   plxspec [0.236/16.105] Spectroscopic parallax
+ 155-159 F5.3   arcsec E_plxspec [0.02/1.456] Upper uncertainty in plxspec
+ 161-165 F5.3   arcsec e_plxspec [0.025/3.654] Lower uncertainty in plxspec
+ 167-171 F5.3   ---      r8      [1/5.109] Ratio of cumulative flux and target
+                                  flux (2)
+ 173-178 F6.4   ---      RCF     [0/1.4072]? Average radius correction factor
+--------------------------------------------------------------------------------
+Note (1): From Petigura et al. (2017, J/AJ/154/107).
+Note (2): r_8_ encodes contaminating flux from neighboring stars within 8 arcsec
+  in G-band (see Section 4.2).
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table3.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label Explanations
+--------------------------------------------------------------------------------
+   1-  9 A9     ---     KOI   Kepler Object of Interest identifier (K0NNNN.NN)
+  11- 24 F14.9  d       Per   [0.299697768/1693.6636225] Kepler period (1)
+  26- 36 F11.9  d     E_Per   [0/0.1416]? Upper uncertainty in Per
+  38- 48 F11.9  d     e_Per   [0/0.1416]? Lower uncertainty in Per
+  50- 58 F9.6   ---     Rp/R* [0.003223/96.986549]? Planet-to-star radius ratio
+                               (1)
+  60- 68 F9.6   ---   E_Rp/R* [0/57.55668]? Upper uncertainty in Rp/R*
+  70- 78 F9.6   ---   e_Rp/R* [7e-06/69.87985]? Lower uncertainty in Rp/R*
+  80- 88 F9.3   Rgeo    Rp    [0.276/30653.495]? Planet radius (2)
+  90- 98 F9.3   Rgeo  E_Rp    [0.022/12973.748]? Upper uncertainty in Rp
+ 100-108 F9.3   Rgeo  e_Rp    [0.022/12973.748]? Lower uncertainty in Rp
+ 110-116 F7.5   AU      a     [0.00797/2.7177]? Semi-major axis (2)
+ 118-124 F7.5   AU    E_a     [3e-05/0.0548]? Upper uncertinty in a
+ 126-132 F7.5   AU    e_a     [3e-05/0.0548]? Lower uncertinty in a
+ 134-140 F7.1   ---     Sinc  [0.1/72599.2]? Incident stellar flux (2)
+ 142-147 F6.1   ---   E_Sinc  [0/8785.5]? Upper uncertainty in Sinc
+ 149-154 F6.1   ---   e_Sinc  [0/8785.5]? Lower uncertainty in Sinc
+--------------------------------------------------------------------------------
+Note (1): From Mullally et al. (2015, J/ApJS/217/31).
+Note (2): Relative to Earth. Derived from the updated stellar properties
+  in Table 2.
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table4.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units Label  Explanations
+--------------------------------------------------------------------------------
+   1-  9 A9     ---   KOI    Kepler Object of Interest identfier (K0NNNN.NN)
+  11- 17 F7.2   ---   S/N    [4.19/4012.61] Signal-to-noise ratio in i band
+                              image
+  19- 23 F5.3   ---   Pdet   [0/1] Detection probability
+  25- 30 F6.4   ---   Ptr    [0.0016/0.3251] Transit probability
+  32- 41 F10.2  ---   Weight [3.28/7117158.76] Weight, 1/w_i_ (1)
+--------------------------------------------------------------------------------
+Note (1): w_i_ is the product of the inverse pipeline detection efficiency
+  P_det_ and the inverse transit probability P_tr_ for each detected planet.
+--------------------------------------------------------------------------------
+
+History:
+    From electronic version of the journal
+
+References:
+ Petigura et al.   Paper I.      2017AJ....154..107P   Cat. J/AJ/154/107
+ Johnson et al.    Paper II.     2017AJ....154..108J   Cat. J/AJ/154/108
+ Fulton et al.     Paper III.    2017AJ....154..109F   Cat. J/AJ/154/109
+ Petigura et al.   Paper IV.     2018AJ....155...89P   Cat. J/AJ/155/89
+ Weiss et al.      Paper V.      2018AJ....155...48W   Cat. J/AJ/155/48
+ Weiss et al.      Paper VI.     2018AJ....156..254W   Cat. J/AJ/156/254
+ Fulton et al.     Paper VII.    2018AJ....156..264F   This catalog
+ Mills et al.      Paper VIII.   2019AJ....157..198M
+ Dai et al.        Paper IX.     2020AJ....159..247D
+ Petigura et al.   Paper X.      2022AJ....163..179P   Cat. J/AJ/163/179
+ Isaacson et al.   Paper XI.     2024ApJ...961...85I   Cat. J/ApJ/961/85
+
+================================================================================
+(End)            Prepared by [AAS], Tiphaine Pouvreau [CDS]          16-Apr-2019

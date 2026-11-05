@@ -1,0 +1,11 @@
+metric,value
+source_stellar_system_rows,286
+source_unique_stellar_systems,286
+source_planet_rows,404
+source_unique_KOIpl,404
+mapped_planet_rows_all,404
+planet_rows_with_stellar_match,404
+planet_rows_without_stellar_match,0
+unique_matched_systems,286
+systems_with_multiple_planets,77
+maximum_planets_per_matched_system,5

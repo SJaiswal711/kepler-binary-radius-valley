@@ -1,0 +1,66 @@
+KOI,Reason,Source,K16,F17,Simbad,_RA,_DE
+0005,Triple,Visual inspection,1,1,Simbad,289.73971,44.64739
+0126,log(g)<4,Gaia,0,1,Simbad,297.47584,41.11429
+0200,Single,Visual inspection,0,1,Simbad,293.09254,41.35553
+0353,Triple,Visual inspection,0,1,Simbad,295.21265,49.56219
+0379,Triple,Visual inspection,0,1,Simbad,292.05666,37.77615
+0425,FP,ExoFOP,0,1,Simbad,297.97429,46.80452
+0454,Single,Visual inspection,0,1,Simbad,284.65792,42.65269
+0511,Triple,Visual inspection,0,1,Simbad,294.64664,41.88413
+0532,Single,Visual inspection,0,1,Simbad,284.25723,47.68896
+0658,Triple,Visual inspection,0,1,Simbad,297.08997,41.38805
+0719,Single,Visual inspection,1,1,Simbad,291.5062,46.89577
+0725,FP,ExoFOP,0,0,Simbad,289.00571,47.04044
+0771,FP,ExoFOP,0,1,Simbad,296.69885,49.31646
+0829,Triple,Visual inspection,0,1,Simbad,290.46178,40.56247
+0854,Triple,Visual inspection,1,1,Simbad,289.5085,41.8121
+0933,FP,ExoFOP,0,0,Simbad,297.78857,45.56557
+1088,FP,ExoFOP,0,0,Simbad,290.63938,38.28469
+1287,FP,ExoFOP,0,0,Simbad,282.2328,48.2711
+1397,Triple,Visual inspection,1,1,Simbad,299.6777,45.97231
+1537,Single,Visual inspection,1,1,Simbad,281.46171,46.78989
+1615,Single?,Visual inspection,1,1,Simbad,295.3225,39.3765
+1660,Triple,Visual inspection,0,1,Simbad,290.24097,39.96794
+1884,Triple,Visual inspection,0,1,Simbad,295.90233,39.91835
+1932,log(g)<4,Gaia,0,1,Simbad,295.93347,40.30056
+1973,Triple,Visual inspection,0,1,Simbad,289.93085,40.09773
+2005,Triple,Visual inspection,1,1,Simbad,281.89835,42.16575
+2032,Multi,Visual inspection,1,1,Simbad,290.52674,38.14298
+2096,Triple,Visual inspection,0,1,Simbad,300.61969,45.7889
+2130,Triple,Visual inspection,0,1,Simbad,291.7262,37.52892
+2174,Multi,Visual inspection,0,1,Simbad,300.24221,44.1414
+2248,Triple,Visual inspection,0,1,Simbad,292.23992,48.51157
+2626,Triple,Visual inspection,1,1,Simbad,294.36603,49.91502
+2641,Triple,Visual inspection,0,1,Simbad,294.99587,45.11961
+2733,Triple,Visual inspection,1,1,Simbad,289.55302,41.29785
+2797,Single,Visual inspection,0,1,Simbad,293.68352,47.83315
+2813,Triple,Visual inspection,1,1,Simbad,295.34216,48.85615
+2910,Triple,Visual inspection,0,1,Simbad,296.21512,39.52702
+2971,Triple,Visual inspection,0,1,Simbad,297.39371,39.82905
+3029,Multi,Visual inspection,0,1,Simbad,298.75836,41.15987
+3049,Triple,Visual inspection,0,1,Simbad,282.99751,41.67859
+3073,Triple,Visual inspection,0,1,Simbad,285.74854,44.63241
+3214,Triple,Visual inspection,0,1,Simbad,298.67379,43.79547
+3264,Triple,Visual inspection,0,1,Simbad,293.25898,45.83747
+3284,Triple,Visual inspection,1,1,Simbad,281.64582,41.95109
+3349,Triple,Visual inspection,0,1,Simbad,295.94828,44.75312
+3377,Triple,Visual inspection,0,1,Simbad,297.05058,40.71738
+3418,Single,Visual inspection,0,1,Simbad,286.13074,38.77961
+3444,Multi,Visual inspection,1,1,Simbad,297.42922,40.56191
+3468,Single,Visual inspection,0,1,Simbad,298.11886,40.37505
+3497,Triple,Visual inspection,1,1,Simbad,289.27448,44.47032
+4021,Background star,Gaia,0,1,Simbad,294.03437,50.37166
+4208,Triple,Visual inspection,0,1,Simbad,298.98506,40.20373
+4252,Triple?,Visual inspection,1,1,Simbad,287.36405,47.78519
+4323,Triple,Visual inspection,0,1,Simbad,297.58191,40.5313
+4329,Triple+(?),Visual inspection,0,1,Simbad,289.01178,51.37602
+4407,Multi,Visual inspection,1,1,Simbad,301.1566,44.37947
+4545,Triple,Visual inspection,0,0,Simbad,291.4581,47.15862
+4550,Triple?,Visual inspection,0,1,Simbad,296.45775,41.26596
+4653,Single,Visual inspection,0,1,Simbad,286.56034,48.89303
+4759,Triple,Visual inspection,0,1,Simbad,287.77298,43.7339
+4871,Triple,Visual inspection,0,1,Simbad,288.52905,42.27625
+5327,Multi,Visual inspection,0,1,Simbad,291.55672,42.21419
+5361,FP,ExoFOP,0,0,Simbad,297.39395,42.68703
+5589,FP,ExoFOP,0,0,Simbad,290.58508,45.22107
+6610,Triple,Visual inspection,0,1,Simbad,295.55298,40.87804
