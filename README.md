@@ -281,22 +281,13 @@ Increasing the model-density uncertainty reduces the median primary probability 
 - `data/processed/binary_host_probability_summary.csv`
 - `data/processed/binary_host_probability_sensitivity.csv`
 
-## 4. Do not conflate the two 396-planet samples
+> **Important — Distinct binary samples:** Notebook 04/06 uses the MIST-quality-controlled parent (396 planets in 278 systems), whereas Notebook 05 starts from a separate radius-gated parent (396 planets in 285 systems). These are not identical samples. Preserve Notebook 05's selection and QC ledger; do not replace its selected sample with Notebook 04/06's input population. When merging host probabilities from Notebook 06, match by normalized `KOIpl` and report matched, unmatched, and invalid-probability rows.
 
-There are two distinct 396-row parent tables in the workflow. They happen to have the same number of planet rows, but differ in their system membership and selection history:
-
-| Branch | Parent definition | Count |
-|---|---|---:|
-| Notebook 04/06 | Sullivan catalogue after the MIST system-quality cut | 396 planets in 278 systems |
-| Notebook 05 | Sullivan catalogue after the initial `Rpkep` radius-domain gate, before the same MIST quality cut | 396 planets in 285 systems |
-
-**Do not treat these as the same sample.** Notebook 04/06's 396/278 population is the MIST-quality-controlled input used by the current host-inference implementation. Notebook 05 starts from its own 396/285 radius-gated parent and uses MIST-derived stellar information in its working binary characterization; its own MIST-QC step, where applied, is a distinct downstream cutflow stage. Its post-MIST-QC count must be reported from Notebook 05's own ledger. The intended publication sequence is to define and freeze the selected comparison sample in Notebook 05 first, run host inference in Notebook 06 second, and then merge the probabilities back into Notebook 05 by normalized planet ID (`KOIpl`). The merge must report matched, unmatched and invalid-probability rows and must not silently replace Notebook 05's selected sample with Notebook 04/06's 396/278 input population.
-
-## 5. Follow-on analysis added after the Notebook 05 snapshot
+## 4. Follow-on analysis added after the Notebook 05 snapshot
 
 The following analyses were developed as additional cells after the uploaded six-notebook snapshot. They use the selected 63-planet/46-system Sullivan confirmed sample and the 520-planet/395-system DR25 apparent-single reference, with the host-probability catalogue produced by Notebook 06.
 
-### 5.1 Period-dependent valley-occupancy statistic
+### 4.1 Period-dependent valley-occupancy statistic
 
 The exploratory estimator currently uses the period-dependent valley centre
 
@@ -312,7 +303,7 @@ F_{\rm valley}=\frac{\sum_i w_i\,\mathbf{1}(|R_{p,i}-R_{\rm valley}(P_i)|\leq0.2
 
 The windows are in linear Earth radii. For a single-host sample, `w_i = 1`; for the expected host-marginalised binary statistic, the primary and secondary radius hypotheses contribute weights `p_pri` and `p_sec`, respectively. This is a selected-sample occupancy statistic, not an intrinsic occurrence-rate estimator. The locus and window widths remain candidates for validation and sensitivity testing; they should not be treated as a universal or final valley definition without further checks.
 
-### 5.2 Probability-marginalised radius distribution
+### 4.2 Probability-marginalised radius distribution
 
 For each planet, the radius distribution combines the two alternative host hypotheses:
 
@@ -334,7 +325,7 @@ The expected histogram uses the primary and secondary radius estimates with weig
 
 The probability-marginalised statistic is 0.019071 below the primary-only value (−4.77%). Under this estimator, that small reduction means marginalisation makes the valley slightly more depleted relative to its surrounding window; it does **not** demonstrate that host ambiguity fills or flattens the valley.
 
-### 5.3 System-level finite-sample subsampling
+### 4.3 System-level finite-sample subsampling
 
 The 10,000-draw experiment samples 46 reference systems without replacement and retains all planets in each selected system. This preserves system clustering and naturally allows the number of planets per draw to vary. It is **not yet covariate matched** in stellar mass, effective temperature, period or multiplicity, and should be described as an initial finite-sample diagnostic rather than a calibrated null test.
 
@@ -351,7 +342,7 @@ The 10,000-draw experiment samples 46 reference systems without replacement and 
 
 The 0.556 value is an empirical position/tail diagnostic from this particular subsampling implementation; it is **not** a formal p-value and should not be reported as one.
 
-### 5.4 System-level bootstrap
+### 4.4 System-level bootstrap
 
 The current 10,000-realisation bootstrap resamples host systems, not individual planet rows, in the binary and apparent-single samples. A host component is also redrawn for each planet in each binary bootstrap realisation. Planet-radius measurement errors are not yet propagated, and the binary/reference samples are not covariate matched.
 
@@ -363,27 +354,41 @@ The current 10,000-realisation bootstrap resamples host systems, not individual 
 
 The 95% interval for the difference includes zero. The current data therefore do not establish a statistically resolved binary–single difference in valley occupancy.
 
-### 5.5 Latest figures
+### 4.5 Latest Figures
 
-**Host-marginalised binary distribution compared with the apparent-single reference**
+The following figures summarize the sample selection, stellar-radius sensitivity, and observed radius distributions.
 
-![Host-marginalised radius distribution](outputs/fulton_filtered_distribution_comparison/01_host_marginalised_radius_distribution.png)
+**Sullivan binary-host radius sensitivity**
 
-**10,000 system-level subsampling experiments**
+![Sullivan host radius sensitivity](outputs/fulton_filtered_distribution_comparison/02_sullivan_host_radius_sensitivity.png)
 
-![10,000 system-level subsampling experiments](outputs/fulton_filtered_distribution_comparison/02_system_level_subsampling_10000.png)
+**Kepler DR25 sample-filter evolution**
 
-**System-level bootstrap distribution of the binary–single contrast**
+![DR25 filter evolution](outputs/fulton_filtered_distribution_comparison/03_DR25_filter_evolution.png)
 
-![System-level bootstrap contrast](outputs/fulton_filtered_distribution_comparison/03_system_bootstrap_delta_fvalley.png)
+**Fulton sample-filter evolution**
 
-**Primary-only versus probability-marginalised binary radius distribution**
+![Fulton filter evolution](outputs/fulton_filtered_distribution_comparison/04_Fulton_filter_evolution.png)
 
-![Primary versus marginalised distribution](outputs/fulton_filtered_distribution_comparison/04_primary_vs_marginalised_distribution.png)
+**CKS sample-filter evolution**
 
-## 6. Reproducing the workflow
+![CKS filter evolution](outputs/fulton_filtered_distribution_comparison/05_CKS_filter_evolution.png)
 
-### 6.1 Software
+**Sullivan binary sample-filter evolution**
+
+![Sullivan filter evolution](outputs/fulton_filtered_distribution_comparison/06_Sullivan_filter_evolution.png)
+
+**Apparent-single reference: raw radius counts**
+
+![Single-star raw count histograms](outputs/fulton_filtered_distribution_comparison/07_single_star_separate_raw_count_histograms.png)
+
+**Sullivan binary sample: raw radius counts**
+
+![Binary raw count histograms](outputs/fulton_filtered_distribution_comparison/08_sullivan_binary_separate_raw_count_histograms.png)
+
+## 5. Reproducing the workflow
+
+### 5.1 Software
 
 The notebooks use Python with Jupyter/IPython and the following libraries:
 
@@ -398,7 +403,7 @@ The notebooks use Python with Jupyter/IPython and the following libraries:
 
 The MIST code uses `numpy.trapezoid`; use NumPy 2.0 or later. A starting dependency list is provided in `requirements.txt`. The exact package versions used for the original Windows notebook runs were not pinned in the supplied notebooks, so the requirements file is a working environment specification rather than a lockfile.
 
-### 6.2 External data required
+### 5.2 External data required
 
 The raw catalogues and MIST isochrone files are not included in this repository starter. They are retrieved or supplied as follows:
 
@@ -418,7 +423,7 @@ The MIST directory must be placed at the project root using the path expected by
 MIST_v1.2_vvcrit0.0_basic_isos/
 ```
 
-### 6.3 Recommended execution order
+### 5.3 Recommended execution order
 
 Run from the repository root so the notebooks' relative `data/` paths resolve. The numbered files are arranged by dependency, but the publication workflow is deliberately **two-pass** for Notebook 05: it must define the comparison cohort before host inference, then be reopened after host inference to complete the probability-marginalised analysis.
 
@@ -431,11 +436,11 @@ Run from the repository root so the notebooks' relative `data/` paths resolve. T
 7. **Return to Notebook 05 — second pass (final inference and figures).** Load the host-probability output, merge by normalized `KOIpl`, audit the join, and run the primary/secondary/MAP/probability-marginalised radius analyses, `F_valley`, finite-sample subsampling and system-level bootstrap. Save these follow-on cells and outputs in Notebook 05 so a fresh-clone reproduction is complete.
 
 If automatic project-root detection in Notebook 05 does not find the project directory, set `PROJECT_ROOT` manually in its first setup cell.
-### 6.4 Data and output policy
+### 5.4 Data and output policy
 
 Large downloaded catalogues, MIST grids, intermediate CSV files and generated output tables are excluded by `.gitignore`. Keep a record of the catalogue identifiers, retrieval dates, table names and selection manifest when preparing a publication. Do not commit proprietary or access-restricted material. The four current PNG diagnostics are included because they are small and directly document the latest analysis state.
 
-## 7. Current scientific limitations and required work
+## 6. Current scientific limitations and required work
 
 The following are not yet complete and should not be presented as completed results:
 
