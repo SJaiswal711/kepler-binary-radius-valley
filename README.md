@@ -1,8 +1,6 @@
 # Kepler Binary Hosts and the Small-Planet Radius Valley
 
-**Repository name recommendation:** `kepler-binary-radius-valley`
-
-This repository contains the six-notebook working pipeline for comparing the observed radius distribution of small Kepler planets in unresolved binary-host systems with an apparent-single reference population. It also contains the latest host-marginalisation, finite-sample and system-bootstrap figures shared during the analysis.
+This repository contains the notebook working pipeline for comparing the observed radius distribution of small Kepler planets in unresolved binary-host systems with an apparent-single reference population. It also contains the latest host-marginalisation, finite-sample and system-bootstrap figures shared during the analysis.
 
 The six notebooks are numbered in dependency order. Notebook 05 is intentionally run twice: first to freeze the comparison sample, then again after Notebook 06 has generated host probabilities.
 
