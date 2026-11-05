@@ -34,26 +34,20 @@ kepler-binary-radius-valley/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
-├── notebooks/
-│   ├── 01_retrieve_kepler_reference_catalogues.ipynb
-│   ├── 02_retrieve_sullivan_binary_catalogue.ipynb
-│   ├── 03_fit_binary_stellar_components_with_mist.ipynb
-│   ├── 04_quality_control_and_finalize_binary_sample.ipynb
-│   ├── 05_build_fulton_comparison_and_radius_distributions.ipynb
-│   └── 06_infer_probabilistic_planet_hosts.ipynb
-├── figures/
-│   ├── 01_host_marginalised_radius_distribution.png
-│   ├── 02_system_level_subsampling_10000.png
-│   ├── 03_system_bootstrap_delta_fvalley.png
-│   └── 04_primary_vs_marginalised_distribution.png
+│
+├── 01_retrieve_kepler_reference_catalogues.ipynb
+├── 02_retrieve_sullivan_binary_catalogue.ipynb
+├── 03_fit_binary_stellar_components_with_mist.ipynb
+├── 04_quality_control_and_finalize_binary_sample.ipynb
+├── 05_build_fulton_comparison_and_radius_distributions.ipynb
+├── 06_infer_probabilistic_planet_hosts.ipynb
+│
 ├── data/
 │   ├── raw/           # downloaded public catalogues; not bundled
 │   ├── reference/     # cached VizieR tables; not bundled
 │   └── processed/     # generated intermediate tables; not bundled
 └── outputs/           # generated analysis products; not bundled
 ```
-
-The six notebooks are copied from the latest available project snapshots reviewed for this README. Their original analysis logic is preserved; filenames have been simplified by removing timestamp suffixes.
 
 ### Important notebook-version note
 
@@ -373,19 +367,19 @@ The 95% interval for the difference includes zero. The current data therefore do
 
 **Host-marginalised binary distribution compared with the apparent-single reference**
 
-![Host-marginalised radius distribution](figures/01_host_marginalised_radius_distribution.png)
+![Host-marginalised radius distribution](outputs/fulton_filtered_distribution_comparison/01_host_marginalised_radius_distribution.png)
 
 **10,000 system-level subsampling experiments**
 
-![10,000 system-level subsampling experiments](figures/02_system_level_subsampling_10000.png)
+![10,000 system-level subsampling experiments](outputs/fulton_filtered_distribution_comparison/02_system_level_subsampling_10000.png)
 
 **System-level bootstrap distribution of the binary–single contrast**
 
-![System-level bootstrap contrast](figures/03_system_bootstrap_delta_fvalley.png)
+![System-level bootstrap contrast](outputs/fulton_filtered_distribution_comparison/03_system_bootstrap_delta_fvalley.png)
 
 **Primary-only versus probability-marginalised binary radius distribution**
 
-![Primary versus marginalised distribution](figures/04_primary_vs_marginalised_distribution.png)
+![Primary versus marginalised distribution](outputs/fulton_filtered_distribution_comparison/04_primary_vs_marginalised_distribution.png)
 
 ## 6. Reproducing the workflow
 
@@ -445,33 +439,56 @@ Large downloaded catalogues, MIST grids, intermediate CSV files and generated ou
 
 The following are not yet complete and should not be presented as completed results:
 
-1. **Host-probability calibration.** Equal priors and a Gaussian density likelihood are provisional. Validate against synthetic known-host systems and any independently identified real hosts; test physically justified prior choices. Include eccentricity/photoeccentric effects where the data support them.
-2. **Stellar-model sensitivity.** Inspect the extreme MIST density solutions, age/metallicity/mass-grid boundary flags, measurement-error assumptions and residual-cut sensitivity.
-3. **Matched comparison.** The 63/46 binary sample and 520/395 apparent-single reference have different selection histories. Add covariate matching or stratification in stellar mass, effective temperature, orbital period and multiplicity where possible.
-4. **Radius-error propagation.** The current host-assignment histograms and bootstrap do not propagate the asymmetric planet-radius measurement errors. Add radius draws jointly with host assignment.
-5. **Valley-estimator validation.** Test the assumed valley locus and narrow/broad window widths. A shifted valley could otherwise be confused with a change in valley depth.
-6. **Selection/completeness.** The current curves describe selected detected planets. A completeness-aware intrinsic occurrence analysis requires Kepler per-target detection efficiencies, companion flux contrasts in the Kepler band, validated crossmatches and a binary-aware detection model. Radius correction and detection-completeness correction are separate tasks.
-7. **Reference-sample interpretation.** “Non-Sullivan” means absent from the Sullivan catalogue, not demonstrably single. CKS and Fulton 2017 are overlapping catalogue products, not independent replication samples.
+### Notebook 01 — Reference Catalogues
+**File:** `01_retrieve_kepler_reference_catalogues.ipynb`
+
+Retrieve and prepare the Kepler DR25, confirmed-planet, California-Kepler Survey (CKS), and Fulton comparison catalogues. These datasets provide the apparent-single reference population, Fulton-like comparison sample, and DR25 transit-derived stellar-density measurements required for host-star inference.
+
+### Notebook 02 — Sullivan Binary Catalogue
+**File:** `02_retrieve_sullivan_binary_catalogue.ipynb`
+
+Retrieve the binary-star catalogue and associated planet tables from Sullivan et al. (2024). Validate catalogue identifiers, check planet-to-system associations, and map individual planet records to their corresponding binary-system properties.
+
+### Notebook 03 — MIST Stellar Fitting
+**File:** `03_fit_binary_stellar_components_with_mist.ipynb`
+
+Perform joint stellar characterization of the primary and secondary components of each binary system using the MIST stellar evolution models. The fitting procedure derives component stellar parameters and the density information required for subsequent analysis.
+
+**Requirement:** A local directory containing the required MIST `.iso` isochrone grids must be available before execution.
+
+### Notebook 04 — Binary Sample Quality Control
+**File:** `04_quality_control_and_finalize_binary_sample.ipynb`
+
+Apply quality-control criteria to the MIST stellar fits using normalized residuals in effective temperature and stellar radius. Identify systems with unreliable stellar solutions and construct the quality-controlled binary planet sample.
+
+The current pipeline retains **278 binary systems containing 396 planets** after quality control.
+
+### Notebook 05 — Comparison Sample and Radius Distributions
+**File:** `05_build_fulton_comparison_and_radius_distributions.ipynb`
+
+Construct the binary and apparent-single comparison samples using Fulton-like selection criteria. Incorporate the relevant MIST-derived stellar information and establish the sample-selection and quality-control cutflows.
+
+The notebook defines and saves the final selected planet and system identifiers, together with a sample manifest, to ensure consistent sample selection throughout the analysis.
+
+It also prepares the radius-distribution comparison framework used in the final statistical analysis.
+
+### Notebook 06 — Probabilistic Host Inference and Final Analysis
+**File:** `06_infer_probabilistic_planet_hosts.ipynb`
+
+Infer the probability that each transiting planet orbits the primary or secondary component of its binary host system. The inference combines MIST-derived component stellar-density information with transit-derived stellar-density measurements from Kepler DR25.
+
+The notebook uses the quality-controlled stellar sample from Notebook 04 and matches its host-inference results to the frozen binary comparison sample from Notebook 05 using normalized planet identifiers (`KOIpl`). The matching procedure explicitly audits matched and unmatched planets, as well as valid and invalid host-probability estimates.
+
+Following host inference, the notebook performs the final radius-distribution analysis, including:
+
+- Primary-host and secondary-host radius distributions.
+- Maximum a posteriori (MAP) host-assignment analysis.
+- Probability-marginalised radius distributions.
+- Radius-valley contrast measurement, \(F_{\rm valley}\).
+- Finite-sample subsampling analysis.
+- System-level bootstrap uncertainty estimation.
 
 The current strongest defensible statement is that the inferred binary radius distribution is sensitive to the assumed host-radius treatment, while the current binary–single difference in the exploratory `F_valley` statistic is statistically unresolved.
-
-## 8. Repository and publication positioning
-
-The project is currently best described as an **observed-radius-distribution and host-assignment analysis**. It should not claim an intrinsic occurrence-rate result or a confirmed physical difference between binary and single-star populations until the host model, sample matching, radius uncertainties and completeness treatment are strengthened.
-
-A possible future paper question is:
-
-> Does the apparent radius-valley morphology of Kepler planets in binary-host systems persist after propagating uncertainty in the identity of the host component and controlling for the different selection histories of the binary and reference samples?
-
-## 9. Suggested repository names
-
-1. **`kepler-binary-radius-valley`** — recommended; specific, searchable and broad enough for the current radius-distribution project.
-2. `kepler-binary-host-inference` — emphasizes the host-component inference method.
-3. `binary-host-radius-distributions` — broad and descriptive.
-4. `kepler-multiplicity-radius-valley` — emphasizes stellar multiplicity and the radius valley.
-5. `host-ambiguity-kepler-planets` — emphasizes the central methodological issue.
-
----
 
 ## Acknowledgement of data sources
 
