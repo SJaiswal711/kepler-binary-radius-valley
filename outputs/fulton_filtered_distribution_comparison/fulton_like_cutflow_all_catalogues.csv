@@ -1,0 +1,31 @@
+sample,stage,N_planets,N_systems,removed,catalogue
+DR25 confirmed (all systems),Input to Fulton-like cuts,2712,1954,0,DR25
+DR25 confirmed (all systems),Kp < 14.2,1058,733,1654,DR25
+DR25 confirmed (all systems),0 <= impact parameter < 0.7,709,537,349,DR25
+DR25 confirmed (all systems),0 < period < 100 d,666,511,43,DR25
+DR25 confirmed (all systems),Fulton dwarf/evolved boundary,626,475,40,DR25
+DR25 confirmed (all systems),4700 < Teff < 6500 K,592,449,34,DR25
+DR25 candidate+confirmed,Input to Fulton-like cuts,3939,2958,0,DR25
+DR25 candidate+confirmed,Kp < 14.2,1502,1093,2437,DR25
+DR25 candidate+confirmed,0 <= impact parameter < 0.7,1022,803,480,DR25
+DR25 candidate+confirmed,0 < period < 100 d,934,735,88,DR25
+DR25 candidate+confirmed,Fulton dwarf/evolved boundary,848,657,86,DR25
+DR25 candidate+confirmed,4700 < Teff < 6500 K,782,601,66,DR25
+Fulton 2017 published filtered sample,Input to Fulton-like cuts,901,652,0,Fulton
+Fulton 2017 published filtered sample,Fulton published-table radius domain: 0.5–20 R_earth,892,650,9,Fulton
+Fulton 2017 published filtered sample,0 < period < 100 d (available-column check),892,650,0,Fulton
+CKS Fulton-like selection,Input to Fulton-like cuts,2026,1279,0,CKS
+CKS Fulton-like selection,DR25 disposition candidate or confirmed,1748,1086,278,CKS
+CKS Fulton-like selection,CKS radius 0.5–20 R_earth,1717,1068,31,CKS
+CKS Fulton-like selection,DR25 Kp < 14.2,1158,811,559,CKS
+CKS Fulton-like selection,DR25 0 <= impact parameter < 0.7,782,594,376,CKS
+CKS Fulton-like selection,0 < period < 100 d,731,562,51,CKS
+CKS Fulton-like selection,CKS dwarf/evolved boundary,700,533,31,CKS
+CKS Fulton-like selection,4700 < CKS Teff < 6500 K,689,527,11,CKS
+Sullivan candidate+confirmed (Fulton-like),Input to Fulton-like cuts,396,285,0,Sullivan
+Sullivan candidate+confirmed (Fulton-like),DR25 disposition candidate or confirmed,356,259,40,Sullivan
+Sullivan candidate+confirmed (Fulton-like),DR25 Kp < 14.2,170,123,186,Sullivan
+Sullivan candidate+confirmed (Fulton-like),DR25 0 <= impact parameter < 0.7,117,91,53,Sullivan
+Sullivan candidate+confirmed (Fulton-like),0 < DR25 period < 100 d,111,85,6,Sullivan
+Sullivan candidate+confirmed (Fulton-like),Primary-star dwarf/evolved boundary,111,85,0,Sullivan
+Sullivan candidate+confirmed (Fulton-like),4700 < primary Teff < 6500 K,90,66,21,Sullivan

@@ -1,0 +1,6 @@
+catalogue,source,raw_rows,selected_rows,selected_systems,radius
+DR25,C:\Users\Lenovo\Downloads\bin\data\raw\nasa\nasa_kepler_dr25_koi.csv,8054,520,395,Rp_DR25
+Fulton 2017,VizieR J/AJ/154/109/table2 (published selected table),901,892,650,Rp_Fulton
+CKS,VizieR J/AJ/154/108/table1 + table4,2026,689,527,Rp_CKS
+Sullivan confirmed,C:\Users\Lenovo\Downloads\bin\data\raw\sullivan\sullivan_planet_table.csv + C:\Users\Lenovo\Downloads\bin\data\raw\sullivan\sullivan_sample_table.csv + DR25 join,404,63,46,Rppri
+Sullivan candidate+confirmed,C:\Users\Lenovo\Downloads\bin\data\raw\sullivan\sullivan_planet_table.csv + C:\Users\Lenovo\Downloads\bin\data\raw\sullivan\sullivan_sample_table.csv + DR25 join,404,90,66,Rppri

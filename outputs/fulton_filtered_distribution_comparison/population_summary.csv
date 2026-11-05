@@ -1,0 +1,6 @@
+population,N_planets_selection_domain,N_systems_selection_domain,N_planets_plot_range_0p5_4,median_radius_Rearth,radius_column
+DR25 confirmed single-star reference,520,395,481,1.725,Rp_DR25
+Fulton 2017 published selected sample,892,650,853,1.54,Rp_Fulton
+CKS with Fulton-like cuts,689,527,650,1.58,Rp_CKS
+Sullivan confirmed-only (primary radius),63,46,63,1.38,Rppri
+Sullivan candidate+confirmed (primary radius),90,66,90,1.315,Rppri
